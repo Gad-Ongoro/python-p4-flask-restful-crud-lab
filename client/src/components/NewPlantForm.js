@@ -7,6 +7,7 @@ function NewPlantForm({ onAddPlant }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    e.target.reset();
     fetch("/plants", {
       method: "POST",
       headers: {
